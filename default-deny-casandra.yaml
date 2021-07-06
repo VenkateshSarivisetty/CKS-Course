@@ -1,0 +1,11 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: cassandra-deny-all
+  namespace: cassandra
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
